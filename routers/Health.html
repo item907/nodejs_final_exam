@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <!-- 需要特別注意路徑問題 -->
+    <link rel="stylesheet" href="styles1.css" />
     <title>每日健康紀錄表</title>
 </head>
 <body>
+    <a href="/user/forms">回上頁</a>
     <div class="Center">
-        <a href="/">回上頁</a>
         <h2>每日健康紀錄表</h2>
         <div class="Line"></div>
         <div class="Tabside">
@@ -40,27 +38,21 @@
                     <b>狀況調查</b>
                 </h4>
                 <h4 class = 'health_left'>
-                    *是否有發燒、咳嗽或呼吸急促症狀？（已服藥者亦須勾選「是」）
-                    <br>
+                    <p>*是否有發燒、咳嗽或呼吸急促症狀？（已服藥者亦須勾選「是」）</p>
                     <input type = "radio" name = 'status' value = 'Y' required>是
                     &emsp;&emsp;&emsp;
                     <input type = "radio" name = 'status' value = 'N' required>否
-                    <br><br>
-                    *狀況描述（無症狀者不需填寫）<br>
+                    <p>*狀況描述（無症狀者不需填寫）</p>
                     <textarea name = "status0" id = "status0" cols = "100" rows = "10" style = "font-size: 16px;"></textarea>
-                    <br><br>
-
-                    *請問您過去14天除了上班路線外，有額外去哪些地區？(跨區才填寫，譬如哪時候從板橋到萬華哪個景點/地點做什麼)
+                    <p>*請問您過去14天除了上班路線外，有額外去哪些地區？(跨區才填寫，譬如哪時候從板橋到萬華哪個景點/地點做什麼)</p>
                     <textarea name = "status1" id = "status1" cols = "100" rows = "3" style = "font-size: 16px;" required></textarea>
-                    <br><br>
                 </h4>
                 <h4 class = 'health_left'>
                     <b>接觸史調查</b>
                 </h4>
                 <h4 class = 'health_left'>
-                    *同住親友是否有收到居家隔離通知單
-                    <br>
-                    <img src = '{% static "img/health.jpg" %}' alt = "圖片錯誤">
+                    <p>*同住親友是否有收到居家隔離通知單</p>
+                    <img src = "health.png" alt = "圖片錯誤">
                     <br>
                     <input type = "radio" name = 'status2' value = 'Y' required>是
                     &emsp;&emsp;&emsp;
@@ -111,6 +103,6 @@
     firebase.analytics();
     const db1 = firebase.firestore();
 </script>
-<script src="health.js"></script>
+<script src="Health.js"></script>
 
 </html>

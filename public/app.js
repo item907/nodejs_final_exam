@@ -46,4 +46,4 @@ form.addEventListener('submit', (e) => {
     form.name.value = '';
     form.gender.value = '';
     form.age.value = '';
-})
+});
