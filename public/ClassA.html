@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<h1>ClassA</h1>
+
+<body>
+    <div class="content">
+        <form id="add-students-form">
+            <input type="text" name="name" placeholder="輸入 Student's name">
+            <input type="text" name="gender" placeholder="輸入 Student's gender">
+            <input type="text" name="age" placeholder="輸入 Student's age">
+            <button> Add a student </button>
+        </form>
+        <table id="stu-table" cellpadding="10" border="1" width="100%">
+            　<tr>
+                　 <td>姓名</td>
+                　 <td>年齡</td>
+                <td>性別</td>
+                　
+            </tr>
+        </table>
+    </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCymfpIwts_CJuKZfTB_tHQGkVa8A0KJgk",
+        authDomain: "test-79ca6.firebaseapp.com",
+        projectId: "test-79ca6",
+        storageBucket: "test-79ca6.appspot.com",
+        messagingSenderId: "833046366188",
+        appId: "1:833046366188:web:102cca9eb66de65e8d62c9",
+        measurementId: "G-6ZR1XZ5CBL"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+</script>
+<script src="app.js"></script>
+
+</html>

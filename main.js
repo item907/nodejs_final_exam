@@ -1,0 +1,21 @@
+let express = require('express');
+let app = express();
+let port = process.env.PORT || 8888;
+let user_router = require('./routers/main_router.js');
+let health = require('./health.js');
+
+app.get('/', (req, res) => {
+    let options = {
+        root: __dirname,
+        dotfiles: 'deny'
+    };
+    res.sendFile("main.html", options);
+});
+
+app.use('/user', user_router);
+
+// app.use('/health', health);
+
+app.listen(port, () => {
+    console.log(`server listen on port ${port}`);
+});
