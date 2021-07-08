@@ -28,7 +28,7 @@ function renderHealth(doc){
     h_table.appendChild(tr);
 }
 
-db1.collection('Health').get().then(data => {
+db.collection("Health").get().then(data => {
     data.docs.forEach(doc => {
         renderHealth(doc);
     });
@@ -36,7 +36,7 @@ db1.collection('Health').get().then(data => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db1.collection('Health').add({
+    db.collection('Health').add({
         h_date: form.h_date.value,
         name: form.name.value,
         phone: form.phone.value,
