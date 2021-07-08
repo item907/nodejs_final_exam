@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-router.use(express.static('./public'));
+// router.use(express.static('./public'));
 
 let Leo = require('./Leo.js');
 let Alice = require('./Alice.js');

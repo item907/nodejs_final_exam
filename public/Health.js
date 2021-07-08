@@ -30,6 +30,10 @@ function renderHealth(doc){
 
 db.collection("Health").get().then(data => {
     data.docs.forEach(doc => {
+        // 若是自行至firebase新增資料,日期欄位為毫秒,需要另外轉換
+        // let time = doc.data().h_date["seconds"]
+        // const time_to_date = new Date(time * 1000).toISOString().split('T')[0];
+        // console.log(time_to_date);
         renderHealth(doc);
     });
 });

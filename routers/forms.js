@@ -28,7 +28,8 @@ router.get('/ClassA',(req,res)=>{
 
 router.get('/Health',(req,res)=>{
     let options = {
-        root: __dirname,
+        // root: __dirname,  路徑問題??,需要將相關檔案搬至public資料夾底下才能正常運作
+        root: path.join(__dirname,"../public"),
         dotfiles: 'deny'
     };
     res.sendFile('Health.html',options);
