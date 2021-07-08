@@ -25,6 +25,17 @@ function renderHealth(doc){
     tr.appendChild(td5);
     tr.appendChild(td6);
     tr.appendChild(td7);
+
+    let cross = document.createElement('div');
+    cross.textContent = 'x';
+    tr.appendChild(cross);
+    cross.addEventListener('click', (test) => {
+        test.stopPropagation();
+        let id = test.target.parentElement.getAttribute('health-id');
+        console.log(id);
+        db.collection('Health').doc(id).delete();
+    });
+
     h_table.appendChild(tr);
 }
 
